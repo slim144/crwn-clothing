@@ -14,8 +14,8 @@ function NavigationBar() {
           <Link className="nav-link" to="/shop">
             SHOP
           </Link>
-          <Link className="nav-link" to="/signin">
-            SIGN In
+          <Link className="nav-link" to="/auth">
+            SIGN IN
           </Link>
         </div>
       </div>
