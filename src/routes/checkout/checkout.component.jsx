@@ -12,7 +12,7 @@ import {
 } from "./checkout.styles";
 
 function CheckOut() {
-  const { cartItems } = useContext(CartContext);
+  const { cartItems, cartTotal } = useContext(CartContext);
 
   return (
     <CheckoutContainer>
@@ -36,14 +36,7 @@ function CheckOut() {
       {cartItems.map((cartItem) => (
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
-      <Total>
-        Total: $
-        {cartItems.reduce(
-          (totalPrice, currentCartItem) =>
-            totalPrice + currentCartItem.price * currentCartItem.quantity,
-          0
-        )}
-      </Total>
+      <Total>Total: ${cartTotal}</Total>
     </CheckoutContainer>
   );
 }
