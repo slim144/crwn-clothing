@@ -20,6 +20,7 @@ import { selectIsCartOpen } from "../../store/cart/cart.selector";
 function NavigationBar() {
   const currentUser = useSelector(selectCurrentUser);
   const isCartOpen = useSelector(selectIsCartOpen);
+
   const signOutHandler = async () => {
     await signOutUser();
   };
